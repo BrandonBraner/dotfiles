@@ -17,6 +17,9 @@ Plugin 'farfanoide/vim-facebook'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -45,6 +48,7 @@ set splitright
 
 syntax on
 set nu
+set clipboard=unnamed
 
 " Enable folding
 set foldmethod=indent
