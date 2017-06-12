@@ -19,6 +19,8 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'qpkorr/vim-bufkill'
+Plugin 'shawncplus/phpcomplete.vim'
 
 
 " All of your Plugins must be added before the following line
@@ -46,8 +48,10 @@ nnoremap <C-H> <C-W><C-H>
 set splitright
 set splitright
 
+let mapleader = ","
 syntax on
-set nu
+set relativenumber
+set number
 set clipboard=unnamed
 
 " Enable folding
@@ -81,9 +85,12 @@ au BufNewFile,BufRead *.js, *.html, *.css
 " flag extra whitespace
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
+" KEYMAPS
 "extra autocomplete/youcompleteme setup
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nmap <leader>nt :NERDTree<cr>
+map <silent> <C-n> :NERDTreeFocus<CR>
 
 "virtualenv support
 py << EOF
