@@ -1,0 +1,25 @@
+# OSX Helpers
+alias showFiles="defaults write com.apple.Finder AppleShowAllFiles true"
+alias hideFiles="defaults write com.apple.Finder AppleShowAllFiles false"
+
+alias c="clear"
+
+#python3 virtualenv
+alias p3_mkenv="mkvirtualenv --python=$(which python3) "
+
+# run wpcli in docker
+alias dcwp='docker-compose exec --user www-data phpfpm wp'
+
+
+#Docker Commands
+alias dockerstopall='docker stop $(docker ps -aq)'
+
+
+#Server SSH
+
+alias web1="ssh bbraner@aws-web1.firstscribe.com"
+alias web2="ssh bbraner@aws-web2.firstscribe.com"
+alias web3="ssh bbraner@aws-web3.firstscribe.com"
+alias web4="ssh bbraner@aws-web4.firstscribe.com"
+
+alias officesrv="ssh bbraner@officespace.firstscribe.lan"
